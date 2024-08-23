@@ -112,8 +112,11 @@ def get_hand_as_string(hand):
 
 
 def print_hands(computer_str, computer, user_str, user):
-    print(f"{user_str}: {get_hand_as_string(user)}")
-    print(f"{computer_str}: {get_hand_as_string(computer)}")
+    print(f"{user_str}: {get_hand_as_string(user)}, sum is {calculate_current_hand_sum(user)}")
+    res = ""
+    if isinstance(computer, list):
+        res = f", sum is {calculate_current_hand_sum(computer)}"
+    print(f"{computer_str}: {get_hand_as_string(computer)}" + res)
 
 
 def print_final_hand(computer, user):
