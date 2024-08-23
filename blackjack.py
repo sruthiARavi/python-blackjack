@@ -207,7 +207,7 @@ while continue_playing:
     user_sum = -1
 
     populate_initial_hands(computer_hand, user_hand)
-    # Check if someone has already achieved blackjack
+    # Check if someone has already achieved blackjack or has otherwise won the game 
     game_over = find_winner(user_hand, computer_hand, False)
 
     if game_over:
